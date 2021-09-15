@@ -2,11 +2,8 @@
 using Basket.API.Repositories.Interfaces;
 using Microsoft.Extensions.Caching.Distributed;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Basket.API.Repositories {
     public class BasketRepository : IBasketRepository {

@@ -10,9 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Behaviors\" />
-    <Folder Include="Features\Orders\Commands\CheckoutOrder\" />
     <Folder Include="Features\Orders\Commands\DeleteOrder\" />
-    <Folder Include="Features\Orders\Commands\UpdateOrder\" />
   </ItemGroup>
 
   <ItemGroup>

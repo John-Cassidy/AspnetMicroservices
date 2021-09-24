@@ -21,8 +21,8 @@ namespace Ordering.Infrastructure.Persistence
         private static IEnumerable<Order> GetPreconfiguredOrders() {
             return new List<Order>
             {
-                new Order() {UserName = "swn", FirstName = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350 }
-                //new Order() {UserName = "jpc", FirstName = "John", LastName = "Cassidy", EmailAddress = "candiawoods@gmail.com", AddressLine = "Cambridge", Country = "United States", TotalPrice = 350 }
+                //new Order() {UserName = "swn", FirstName = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350 }
+                new Order() {UserName = "jpc", FirstName = "John", LastName = "Cassidy", EmailAddress = "candiawoods@gmail.com", AddressLine = "Cambridge", Country = "United States", TotalPrice = 350 }
             };
         }
     }

@@ -4,7 +4,7 @@ using Serilog;
 using Serilog.Sinks.Elasticsearch;
 using System;
 
-namespace AspnetRunBasics {
+namespace Common.Logging {
     public static class SeriLogger {
         public static Action<HostBuilderContext, LoggerConfiguration> Configure =>
         (context, configuration) =>
@@ -14,7 +14,7 @@ namespace AspnetRunBasics {
             configuration
                  .Enrich.FromLogContext()
                  .Enrich.WithMachineName()
-                 //.WriteTo.Debug()
+                 .WriteTo.Debug()
                  .WriteTo.Console()
                  .WriteTo.Elasticsearch(
                      new ElasticsearchSinkOptions(new Uri(elasticUri)) {
@@ -24,7 +24,7 @@ namespace AspnetRunBasics {
                          NumberOfReplicas = 1
                      })
                  .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName)
-                 //.Enrich.WithProperty("Application", context.HostingEnvironment.ApplicationName)
+                 .Enrich.WithProperty("Application", context.HostingEnvironment.ApplicationName)
                  .ReadFrom.Configuration(context.Configuration);
         };
     }

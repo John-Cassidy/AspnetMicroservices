@@ -45,7 +45,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{615A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetRunBasics", "WebApps\AspnetRunBasics\AspnetRunBasics.csproj", "{FF0028AE-C62D-45AF-84F9-291BDE884844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging", "BuildingBlocks\Common.Logging\Common.Logging.csproj", "{9E11E97B-F750-4FB1-81FD-946906DFBDFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Logging", "BuildingBlocks\Common.Logging\Common.Logging.csproj", "{9E11E97B-F750-4FB1-81FD-946906DFBDFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStatus", "WebApps\WebStatus\WebStatus.csproj", "{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +111,10 @@ Global
 		{9E11E97B-F750-4FB1-81FD-946906DFBDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E11E97B-F750-4FB1-81FD-946906DFBDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E11E97B-F750-4FB1-81FD-946906DFBDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +137,7 @@ Global
 		{0536BE3A-145F-45B6-B2C9-7986FB5266C3} = {7AE2DA07-090C-42DC-B1C8-3D87BF6D3492}
 		{FF0028AE-C62D-45AF-84F9-291BDE884844} = {615A2D01-596F-4919-B2E3-2BF34717FC73}
 		{9E11E97B-F750-4FB1-81FD-946906DFBDFC} = {CAB2E1E1-FB8F-4A5B-827C-9D30FC67B9D4}
+		{4B48A53C-AC05-4F4E-9E3B-1EF059D89EBB} = {615A2D01-596F-4919-B2E3-2BF34717FC73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0954CCB-3CBF-430E-92AE-22EC37D00136}

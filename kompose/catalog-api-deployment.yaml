@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Software\kompose\kompose.exe convert -f docker-compose.yml
+    kompose.version: 1.25.0 (a70f80cc)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: catalog-api
+  name: catalog-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: catalog-api
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Software\kompose\kompose.exe convert -f docker-compose.yml
+        kompose.version: 1.25.0 (a70f80cc)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: catalog-api
+    spec:
+      containers:
+        - image: catalogapi
+          name: catalog.api
+          resources: {}
+      restartPolicy: Always
+status: {}

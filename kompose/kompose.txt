@@ -1,0 +1,44 @@
+> kompose convert -f docker-compose.yml
+INFO Service name in docker-compose has been changed from "catalog.api" to "catalog-api"
+INFO Service name in docker-compose has been changed from "basket.api" to "basket-api"
+INFO Service name in docker-compose has been changed from "discount.api" to "discount-api"
+INFO Service name in docker-compose has been changed from "ordering.api" to "ordering-api"
+INFO Service name in docker-compose has been changed from "discount.grpc" to "discount-grpc"
+INFO Service name in docker-compose has been changed from "shopping.aggregator" to "shopping-aggregator"
+WARN Service "aspnetrunbasics" won't be created because 'ports' is not specified
+WARN Service "basket.api" won't be created because 'ports' is not specified
+WARN Service "basketdb" won't be created because 'ports' is not specified
+WARN Service "catalog.api" won't be created because 'ports' is not specified
+WARN Service "catalogdb" won't be created because 'ports' is not specified
+WARN Service "discount.api" won't be created because 'ports' is not specified
+WARN Service "discount.grpc" won't be created because 'ports' is not specified
+WARN Service "discountdb" won't be created because 'ports' is not specified
+WARN Service "elasticsearch" won't be created because 'ports' is not specified
+WARN Service "kibana" won't be created because 'ports' is not specified
+WARN Service "ocelotapigw" won't be created because 'ports' is not specified
+WARN Service "orderdb" won't be created because 'ports' is not specified
+WARN Service "ordering.api" won't be created because 'ports' is not specified
+WARN Service "pgadmin" won't be created because 'ports' is not specified
+WARN Service "portainer" won't be created because 'ports' is not specified
+WARN Service "rabbitmq" won't be created because 'ports' is not specified
+WARN Service "shopping.aggregator" won't be created because 'ports' is not specified
+WARN Service "webstatus" won't be created because 'ports' is not specified
+INFO Kubernetes file "aspnetrunbasics-deployment.yaml" created
+INFO Kubernetes file "basket-api-deployment.yaml" created
+INFO Kubernetes file "basketdb-deployment.yaml" created
+INFO Kubernetes file "catalog-api-deployment.yaml" created
+INFO Kubernetes file "catalogdb-deployment.yaml" created
+INFO Kubernetes file "discount-api-deployment.yaml" created
+INFO Kubernetes file "discount-grpc-deployment.yaml" created
+INFO Kubernetes file "discountdb-deployment.yaml" created
+INFO Kubernetes file "elasticsearch-deployment.yaml" created
+INFO Kubernetes file "kibana-deployment.yaml" created
+INFO Kubernetes file "ocelotapigw-deployment.yaml" created
+INFO Kubernetes file "orderdb-deployment.yaml" created
+INFO Kubernetes file "ordering-api-deployment.yaml" created
+INFO Kubernetes file "pgadmin-deployment.yaml" created
+INFO Kubernetes file "portainer-deployment.yaml" created
+INFO Kubernetes file "rabbitmq-deployment.yaml" created
+INFO Kubernetes file "shopping-aggregator-deployment.yaml" created
+INFO Kubernetes file "webstatus-deployment.yaml" created
+

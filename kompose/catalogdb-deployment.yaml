@@ -1,31 +1,68 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: C:\Software\kompose\kompose.exe convert -f docker-compose.yml
-    kompose.version: 1.25.0 (a70f80cc)
-  creationTimestamp: null
+  name: catalogdb-deployment
   labels:
-    io.kompose.service: catalogdb
-  name: catalogdb
+    app: catalogdb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: catalogdb
-  strategy: {}
+      app: catalogdb
   template:
     metadata:
-      annotations:
-        kompose.cmd: C:\Software\kompose\kompose.exe convert -f docker-compose.yml
-        kompose.version: 1.25.0 (a70f80cc)
-      creationTimestamp: null
       labels:
-        io.kompose.service: catalogdb
+        app: catalogdb
     spec:
       containers:
-        - image: mongo
-          name: catalogdb
-          resources: {}
-      restartPolicy: Always
-status: {}
+        - name: catalogdb
+          image: mongo
+          ports:
+            - containerPort: 27017
+          resources:
+            requests:
+              memory: '64Mi'
+              cpu: '250m'
+            limits:
+              memory: '128Mi'
+              cpu: '500m'
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: catalogdb-secret
+                  key: mongo-root-username
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: catalogdb-secret
+                  key: mongo-root-password
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: catalogdb-secret
+type: Opaque
+data:
+  mongo-root-username: dXNlcm5hbWU=
+  mongo-root-password: cGFzc3dvcmQ=
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalogdb-configmap
+data:
+  connection_string: mongodb://username:password@catalogdb-service:27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalogdb-service
+spec:
+  selector:
+    app: catalogdb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
